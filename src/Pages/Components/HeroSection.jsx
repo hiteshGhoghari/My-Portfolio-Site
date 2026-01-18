@@ -3,7 +3,7 @@ import { Box, Button, Container, Grid2, Typography } from '@mui/material'
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import HeroBg from '../../assets/image/hero-bg.jpg';
 import HandImg from '../../assets/image/hand.png';
-import MypicImg from '../../assets/image/my-pic.png';
+import MypicImg from '../../assets/image/hitesh-pic.png';
 
 const HeroSection = () => {
     return (
@@ -45,7 +45,7 @@ const HeroSection = () => {
                                     <Typography sx={{ display: 'flex', alignItems: 'center', gap: "10px", color: '#05AEB5' }} variant="body1">Hi there! <img src={HandImg} alt="" /> I'm Hitesh</Typography>
                                     <Box sx={{
                                         '& h1': {
-                                            fontSize: { lg: '80px', md: '60px', sm: '50px', xs: '40px', },
+                                            fontSize: { lg: '80px', md: '60px', sm: '40px', xs: '40px', },
                                         },
                                     }}>
                                         <Typography sx={{
@@ -91,7 +91,7 @@ const HeroSection = () => {
                                     textAlign: 'center',
                                     width: { lg: '400px', md: '300px', sm: '100%', xs: '100%', },
                                     margin: '0 auto',
-                                    height: { lg: '600px', md: '500px', sm: '500px', xs: '450px', },
+                                    height: { lg: '600px', md: '450px', sm: '400px', xs: '432px', },
                                     position: 'relative',
                                     '&:after': {
                                         content: "''",

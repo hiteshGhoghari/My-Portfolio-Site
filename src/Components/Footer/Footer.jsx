@@ -9,6 +9,7 @@ import BrandLogo from '../../assets/image/Logo.svg';
 const navItems = ['Home', 'About Us', 'Services', 'Portfolio', 'Contact'];
 const useFul = ['Help Center', 'Privacy Policy', 'Terms of Services'];
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
     return (
         <Box sx={{
             background: "#000",
@@ -81,13 +82,21 @@ const Footer = () => {
                         justifyContent: 'space-between',
                         flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column-reverse', },
                     }}>
-                        <Typography sx={{
-                            textAlign: 'center',
-                            color: "#fff",
-                            '& a': {
-                                color: "#e5997d",
-                            },
-                        }}>© 2025 All rights reserved by  <Link to="/">Hitesh Ghoghari</Link></Typography>
+                        <Typography
+                            sx={{
+                                textAlign: "center",
+                                color: "#fff",
+                                fontSize: { lg: '16px', md: '16px', sm: '16px', xs: '16px', },
+                                "& a": {
+                                    color: "#e5997d",
+                                    display: { lg: 'inline-block', md: 'inline-block', sm: 'inline-block', xs: 'block', },
+                                },
+                            }}
+                        >
+                            © {currentYear} All rights reserved by{" "}
+                            <Link to="/">Hitesh Ghoghari</Link>
+                        </Typography>
+
                         <Box sx={{
                             display: 'flex',
                             alignItems: 'center',

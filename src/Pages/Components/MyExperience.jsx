@@ -45,7 +45,7 @@ const MyExperience = () => {
                                     color: '#e5997d',
                                     fontWeight: '700',
                                     fontSize: { lg: '120px', md: '120px', sm: '90px', xs: '90px', },
-                                }} variant="h3">7+</Typography>
+                                }} variant="h3">8+</Typography>
                                 <Typography sx={{
                                     color: '#fff',
                                     fontSize: { lg: '40px', md: '40px', sm: '36px', xs: '32px', },

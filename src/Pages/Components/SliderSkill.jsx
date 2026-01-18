@@ -42,7 +42,7 @@ const SliderSkill = () => {
                 }}>
                     <Box className="sliderLogo">
                         <Box className="sliderLogoItem">
-                            <Typography>Designer</Typography>
+                            <Typography>Web Designer</Typography>
                         </Box>
                         <Box className="sliderLogoItem">
                             <FlareIcon />
@@ -66,7 +66,7 @@ const SliderSkill = () => {
                             <FlareIcon />
                         </Box>
                         <Box className="sliderLogoItem">
-                            <Typography>Designer</Typography>
+                            <Typography>Web Designer</Typography>
                         </Box>
                         <Box className="sliderLogoItem">
                             <FlareIcon />
@@ -90,7 +90,7 @@ const SliderSkill = () => {
                             <FlareIcon />
                         </Box>
                         <Box className="sliderLogoItem">
-                            <Typography>Designer</Typography>
+                            <Typography>Web Designer</Typography>
                         </Box>
                         <Box className="sliderLogoItem">
                             <FlareIcon />
@@ -114,7 +114,7 @@ const SliderSkill = () => {
                             <FlareIcon />
                         </Box>
                         <Box className="sliderLogoItem">
-                            <Typography>Designer</Typography>
+                            <Typography>Web Designer</Typography>
                         </Box>
                         <Box className="sliderLogoItem">
                             <FlareIcon />
@@ -138,7 +138,7 @@ const SliderSkill = () => {
                             <FlareIcon />
                         </Box>
                         <Box className="sliderLogoItem">
-                            <Typography>Designer</Typography>
+                            <Typography>Web Designer</Typography>
                         </Box>
                         <Box className="sliderLogoItem">
                             <FlareIcon />
