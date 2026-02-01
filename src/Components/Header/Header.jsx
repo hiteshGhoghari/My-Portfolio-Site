@@ -50,6 +50,7 @@ const Header = () => {
                     width: "100%",
                     boxShadow: 'none',
                     transition: 'all 0.4s',
+                    textTransform: 'capitalize',
                     transitionTimingFunction: 'cubic-bezier(0.5, 3, 0, 1)',
                     '&:hover': {
                         color: '#fff',
@@ -163,6 +164,7 @@ const Header = () => {
                                     fontWeight: 600,
                                     boxShadow: 'none',
                                     transition: 'all 0.4s',
+                                    textTransform: 'capitalize',
                                     transitionTimingFunction: 'cubic-bezier(0.5, 3, 0, 1)',
                                     '&:hover': {
                                         color: '#fff',

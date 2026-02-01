@@ -82,7 +82,7 @@ const MyRecentWorks = () => {
                         height: { lg: 'auto', md: 'auto', sm: '262px', xs: 'auto', },
                         position: "relative",
                         cursor: 'pointer',
-                        border: '1px solid rgb(7 180 187 / 30%)',
+                        border: { lg: '1px solid rgb(7 180 187 / 30%)', md: '1px solid rgb(7 180 187 / 30%)', sm: '1px solid rgb(7 180 187 / 30%)', xs: '0', },
                         '& .workboximg': {
                             overflow: 'hidden',
                             position: "relative",
@@ -152,7 +152,7 @@ const MyRecentWorks = () => {
                     },
                 }}>
                     <Container>
-                        <Grid2 container>
+                        <Grid2 onClick={() => window.open('https://yaowellness.com', '_blank')} sx={{ marginBottom: { lg: '0px', md: '0px', sm: '0px', xs: '15px', }, border: { lg: '0px', md: '0px', sm: '0px', xs: '1px solid rgba(7, 180, 187, 0.3)', }, }} container>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
                                 <Box sx={{
                                     marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', },
@@ -189,8 +189,10 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                         </Grid2>
-                        <Grid2 sx={{
+                        <Grid2 onClick={() => window.open('https://bookfreelancer.net/', '_blank')} sx={{
                             flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column-reverse', },
+                            marginBottom: { lg: '0px', md: '0px', sm: '0px', xs: '15px', },
+                            border: { lg: '0px', md: '0px', sm: '0px', xs: '1px solid rgba(7, 180, 187, 0.3)', },
                         }} container>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
                                 <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
@@ -217,7 +219,7 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboximg'>
                                             <img src={Bookfreelancer} alt="" />
@@ -226,9 +228,9 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                         </Grid2>
-                        <Grid2 container>
+                        <Grid2 onClick={() => window.open('https://www.rosswaldhuette.at/de/', '_blank')} sx={{ marginBottom: { lg: '0px', md: '0px', sm: '0px', xs: '15px', }, border: { lg: '0px', md: '0px', sm: '0px', xs: '1px solid rgba(7, 180, 187, 0.3)', }, }} container>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboximg'>
                                             <img src={Rosswaldhuette} alt="" />
@@ -237,7 +239,7 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px", }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboxtext'>
                                             <Box sx={{
@@ -262,11 +264,13 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                         </Grid2>
-                        <Grid2 sx={{
+                        <Grid2 onClick={() => window.open('https://www.longlife.at/de/', '_blank')} sx={{
                             flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column-reverse', },
+                            marginBottom: { lg: '0px', md: '0px', sm: '0px', xs: '15px', },
+                            border: { lg: '0px', md: '0px', sm: '0px', xs: '1px solid rgba(7, 180, 187, 0.3)', },
                         }} container>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboxtext'>
                                             <Box sx={{
@@ -290,7 +294,7 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboximg'>
                                             <img src={Longlife} alt="" />
@@ -299,9 +303,9 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                         </Grid2>
-                        <Grid2 container>
+                        <Grid2 onClick={() => window.open('https://nextmatchup.com/', '_blank')} sx={{ marginBottom: { lg: '0px', md: '0px', sm: '0px', xs: '15px', }, border: { lg: '0px', md: '0px', sm: '0px', xs: '1px solid rgba(7, 180, 187, 0.3)', }, }} container>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, marginTop: "-1px" }} className='workitem'>
+                                <Box sx={{ marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboximg'>
                                             <img src={Nextmatchup} alt="" />
@@ -310,7 +314,7 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboxtext'>
                                             <Box sx={{
@@ -334,11 +338,13 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                         </Grid2>
-                        <Grid2 sx={{
+                        <Grid2 onClick={() => window.open('https://vinhuset.dk/', '_blank')} sx={{
                             flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column-reverse', },
+                            marginBottom: { lg: '0px', md: '0px', sm: '0px', xs: '15px', },
+                            border: { lg: '0px', md: '0px', sm: '0px', xs: '1px solid rgba(7, 180, 187, 0.3)', },
                         }} container>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboxtext'>
                                             <Box sx={{
@@ -362,7 +368,7 @@ const MyRecentWorks = () => {
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                <Box sx={{ marginTop: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
                                     <Box className='workbox'>
                                         <Box className='workboximg'>
                                             <img src={Vinhuset} alt="" />
@@ -387,6 +393,7 @@ const MyRecentWorks = () => {
                         fontWeight: 600,
                         boxShadow: 'none',
                         transition: 'all 0.4s',
+                        textTransform: 'capitalize',
                         transitionTimingFunction: 'cubic-bezier(0.5, 3, 0, 1)',
                         '&:hover': {
                             color: '#fff',
