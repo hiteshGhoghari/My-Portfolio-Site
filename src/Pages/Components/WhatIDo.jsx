@@ -155,9 +155,7 @@ const WhatIDo = () => {
                                         <img src={WebIdeaImg} alt="" />
                                     </Typography>
                                     <Typography variant="h3">Web Research</Typography>
-                                    <Typography>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                    </Typography>
+                                    <Typography>I analyze business goals, target audiences, competitors, and industry trends to build a strong foundation for every project. This research-driven approach ensures the design is purposeful, user-focused, and aligned with real-world needs.</Typography>
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
@@ -166,9 +164,7 @@ const WhatIDo = () => {
                                         <img src={PenToolImg} alt="" />
                                     </Typography>
                                     <Typography variant="h3">Ui/Ux Design</Typography>
-                                    <Typography>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                    </Typography>
+                                    <Typography>I design intuitive user experiences and visually engaging interfaces that guide users effortlessly. Every layout, interaction, and flow is crafted to improve usability, clarity, and conversion while maintaining a modern aesthetic.</Typography>
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
@@ -177,9 +173,7 @@ const WhatIDo = () => {
                                         <img src={WebCodeImg} alt="" />
                                     </Typography>
                                     <Typography variant="h3">Web Design</Typography>
-                                    <Typography>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                    </Typography>
+                                    <Typography>I create clean, responsive, and visually compelling website designs that reflect brand identity. My designs balance creativity with consistency, ensuring your website looks professional and performs seamlessly across all devices.</Typography>
                                 </Box>
                             </Grid2>
                             <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
@@ -188,9 +182,7 @@ const WhatIDo = () => {
                                         <img src={DataCodeImg} alt="" />
                                     </Typography>
                                     <Typography variant="h3">Web Development</Typography>
-                                    <Typography>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                    </Typography>
+                                    <Typography>I transform designs into fast, functional, and scalable websites using modern technologies. With clean code and performance-focused development, I ensure smooth interactions, responsiveness, and long-term maintainability.</Typography>
                                 </Box>
                             </Grid2>
                         </Grid2>

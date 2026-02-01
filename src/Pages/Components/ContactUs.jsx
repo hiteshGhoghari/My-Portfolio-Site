@@ -1,13 +1,149 @@
-import React from 'react'
+import { useState } from "react";
 import { Box, Container, Button, Grid2, Link, Typography, TextField } from '@mui/material'
 import CallMadeRoundedIcon from '@mui/icons-material/CallMadeRounded';
 import HomeImg from '../../assets/image/home-img.svg';
 import MailImg from '../../assets/image/mail-img.svg';
 import PhoneImg from '../../assets/image/phone-img.svg';
 import ShapeCircle from '../../assets/image/section-bg-shape-8.png';
-
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        subject: "",
+        email: "",
+        phone: "",
+        message: "",
+    });
+    const [errors, setErrors] = useState({});
+
+    const [loading, setLoading] = useState(false);
+
+    // Handle input change
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        if (name === 'phone') {
+            let val = value;
+
+            // Allow only digits and +
+            val = val.replace(/[^\d+]/g, '');
+
+            // Allow + only at start and only once
+            if (val.includes('+')) {
+                val = '+' + val.replace(/\+/g, '');
+            }
+
+            // Limit digits to 15 (ignore +)
+            const digits = val.replace(/\D/g, '');
+            if (digits.length > 15) {
+                val = val.startsWith('+')
+                    ? '+' + digits.slice(0, 15)
+                    : digits.slice(0, 15);
+            }
+
+            setFormData(prev => ({
+                ...prev,
+                phone: val,
+            }));
+
+            // Clear error on typing
+            if (val.length > 0) {
+                setErrors(prev => ({ ...prev, phone: '' }));
+            }
+
+            return;
+        }
+
+        setFormData(prev => ({
+            ...prev,
+            [name]: value,
+        }));
+
+        if (value.trim()) {
+            setErrors(prev => ({ ...prev, [name]: '' }));
+        }
+    };
+
+
+
+
+    const validateForm = () => {
+        let tempErrors = {};
+
+        if (!formData.name.trim()) {
+            tempErrors.name = "Name is required";
+        }
+
+        if (!formData.subject.trim()) {
+            tempErrors.subject = "Subject is required";
+        }
+
+        if (!formData.email.trim()) {
+            tempErrors.email = "Email is required";
+        } else if (
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+        ) {
+            tempErrors.email = "Enter a valid email address";
+        }
+
+        if (!formData.phone.trim()) {
+            tempErrors.phone = "Phone number is required";
+        } else if (!/^[0-9+\-\s]{8,15}$/.test(formData.phone)) {
+            tempErrors.phone = "Enter a valid phone number";
+        }
+
+        if (!formData.message.trim()) {
+            tempErrors.message = "Message is required";
+        }
+
+        setErrors(tempErrors);
+        return Object.keys(tempErrors).length === 0;
+    };
+
+
+    // Submit form
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!validateForm()) {
+            return; // ❌ stop if validation fails
+        }
+
+        setLoading(true);
+
+        emailjs
+            .send(
+                "service_r0k0nuo",
+                "template_45x21o1",
+                {
+                    name: formData.name,
+                    subject: formData.subject,
+                    email: formData.email,
+                    phone: formData.phone,
+                    message: formData.message,
+                },
+                "QEXNybz-zt3Ix4ane"
+            )
+            .then(() => {
+                alert("Message sent successfully!");
+                setFormData({
+                    name: "",
+                    subject: "",
+                    email: "",
+                    phone: "",
+                    message: "",
+                });
+                setErrors({});
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error(error);
+                alert("Failed to send message!");
+                setLoading(false);
+            });
+    };
+
     return (
         <>
             <Box sx={{
@@ -192,15 +328,43 @@ const ContactUs = () => {
                                         color: '#ADADAD',
                                     },
                                 },
+                                '& .MuiFilledInput-root': {
+                                    backgroundColor: 'transparent',
+
+                                    '&:hover': {
+                                        backgroundColor: 'transparent',
+                                    },
+
+                                    '&.Mui-focused': {
+                                        backgroundColor: 'transparent',
+                                    },
+
+                                    '& input': {
+                                        color: '#ADADAD',
+
+                                        '&:-webkit-autofill': {
+                                            WebkitBoxShadow: '0 0 0 1000px #000 inset',
+                                            WebkitTextFillColor: '#ADADAD',
+                                            transition: 'background-color 5000s ease-in-out 0s',
+                                        },
+                                    },
+                                },
+                                '& .MuiFormHelperText-root': {
+                                    marginInline: '0',
+                                },
                             }}>
                                 <Grid2 container spacing={4}>
                                     <Grid2 size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                                         <Box className='contactfiled'>
                                             <TextField
                                                 fullWidth
-                                                id="filled-basic"
                                                 label="Name"
                                                 variant="filled"
+                                                name="name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                error={!!errors.name}
+                                                helperText={errors.name}
                                             />
                                         </Box>
                                     </Grid2>
@@ -208,9 +372,13 @@ const ContactUs = () => {
                                         <Box className='contactfiled'>
                                             <TextField
                                                 fullWidth
-                                                id="filled-basic"
                                                 label="Subject"
                                                 variant="filled"
+                                                name="subject"
+                                                value={formData.subject}
+                                                onChange={handleChange}
+                                                error={!!errors.subject}
+                                                helperText={errors.subject}
                                             />
                                         </Box>
                                     </Grid2>
@@ -218,9 +386,13 @@ const ContactUs = () => {
                                         <Box className='contactfiled'>
                                             <TextField
                                                 fullWidth
-                                                id="filled-basic"
                                                 label="Email"
                                                 variant="filled"
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                error={!!errors.email}
+                                                helperText={errors.email}
                                             />
                                         </Box>
                                     </Grid2>
@@ -228,9 +400,27 @@ const ContactUs = () => {
                                         <Box className='contactfiled'>
                                             <TextField
                                                 fullWidth
-                                                id="filled-basic"
                                                 label="Phone"
                                                 variant="filled"
+                                                name="phone"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                error={!!errors.phone}
+                                                helperText={errors.phone}
+                                                type="tel" // 👈 IMPORTANT
+                                                inputProps={{
+                                                    inputMode: 'numeric',
+                                                    pattern: '[0-9]*',
+                                                }}
+                                                sx={{
+                                                    '& input': {
+                                                        '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
+                                                            WebkitAppearance: 'none',
+                                                            margin: 0,
+                                                        },
+                                                        MozAppearance: 'textfield',
+                                                    },
+                                                }}
                                             />
                                         </Box>
                                     </Grid2>
@@ -240,35 +430,46 @@ const ContactUs = () => {
                                                 fullWidth
                                                 multiline
                                                 rows={5}
-                                                id="filled-basic"
                                                 label="Message..."
                                                 variant="filled"
+                                                name="message"
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                error={!!errors.message}
+                                                helperText={errors.message}
                                             />
                                         </Box>
                                     </Grid2>
                                     <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
-                                        <Box sx={{
-                                            textAlign: 'center',
-                                        }}>
-                                            <Button sx={{
-                                                background: "transparent",
-                                                color: "#e5997d",
-                                                border: "1px solid #e5997d",
-                                                borderRadius: "0",
-                                                padding: { lg: "10px 28px", md: "6px 22px" },
-                                                fontSize: '16px',
-                                                fontWeight: 600,
-                                                textTransform: 'capitalize',
-                                                boxShadow: 'none',
-                                                transition: 'all 0.4s',
-                                                transitionTimingFunction: 'cubic-bezier(0.5, 3, 0, 1)',
-                                                '&:hover': {
-                                                    color: '#fff',
-                                                    background: '#e5997d',
-                                                    transform: 'skewX(-15deg)',
-                                                },
-                                            }} variant="contained" className='theme-btn'>
-                                                Send Message  <CallMadeRoundedIcon sx={{ marginLeft: '4px' }} />
+                                        <Box sx={{ textAlign: "center" }}>
+                                            <Button
+                                                onClick={handleSubmit}
+                                                disabled={loading}
+                                                sx={{
+                                                    background: "transparent",
+                                                    color: "#e5997d",
+                                                    border: "1px solid #e5997d",
+                                                    borderRadius: "0",
+                                                    padding: { lg: "10px 28px", md: "6px 22px" },
+                                                    fontSize: "16px",
+                                                    fontWeight: 600,
+                                                    textTransform: "capitalize",
+                                                    boxShadow: "none",
+                                                    transition: "all 0.4s",
+                                                    transitionTimingFunction:
+                                                        "cubic-bezier(0.5, 3, 0, 1)",
+                                                    "&:hover": {
+                                                        color: "#fff",
+                                                        background: "#e5997d",
+                                                        transform: "skewX(-15deg)",
+                                                    },
+                                                    '&.Mui-disabled': {
+                                                        color: '#fff',
+                                                    },
+                                                }}
+                                            >
+                                                {loading ? "Sending..." : "Send Message"}
+                                                <CallMadeRoundedIcon sx={{ ml: 1 }} />
                                             </Button>
                                         </Box>
                                     </Grid2>

@@ -1,59 +1,18 @@
 import React from 'react';
 import { Box, Container, Button, Grid2, Typography } from '@mui/material'
 import CallMadeRoundedIcon from '@mui/icons-material/CallMadeRounded';
-import HeroIcCover from '../../assets/image/heroic-cover.png';
-import OmiDyCover from '../../assets/image/omiday-cover.png';
-import OFCover from '../../assets/image/optifly-cover.png';
-import RBCover from '../../assets/image/royalbatch-cover.png';
-import ChevronLeft from '../../assets/image/left-chevron.png';
-import ChevronRight from '../../assets/image/right-chevron.png';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Yaoweliness from '../../assets/image/yaoweliness.png';
+import Bookfreelancer from '../../assets/image/bookfreelancer.png';
+import Nextmatchup from '../../assets/image/nextmatchup.png';
+import Vinhuset from '../../assets/image/vinhuset.png';
+import Rosswaldhuette from '../../assets/image/rosswaldhuette.png';
+import Longlife from '../../assets/image/longlife.png';
+
 
 
 
 const MyRecentWorks = () => {
 
-
-
-    const settings = {
-        className: "center",
-        centerMode: true,
-        centerPadding: "200px",
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1441,
-                settings: {
-                    slidesToShow: 3,
-                    centerPadding: "80px",
-                }
-            },
-            {
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 3,
-                    centerPadding: "10px",
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    centerPadding: "40px",
-
-                }
-            },
-        ],
-    };
     return (
         <>
             <Box sx={{
@@ -112,132 +71,22 @@ const MyRecentWorks = () => {
                     }}></Box>
 
                 </Box>
-
-
-
-
-
                 <Box sx={{
-                    '& .slick-slider': {
-                        paddingBottom: "50px",
-                    },
-                    '& .slick-arrow': {
-                        zIndex: '9',
-                        background: '#07B4BB',
-                        borderRadius: '0',
-                        width: '50px',
-                        height: '50px',
-                    },
-                    '& .slick-prev': {
-                        left: '0px',
-                        '&:before': {
-                            content: "''",
-                            opacity: "1",
-                            backgroundImage: `url(${ChevronLeft})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'contain',
-                            backgroundRepeat: 'no-repeat',
-                            width: '40px',
-                            height: "40px",
-                            position: 'absolute',
-                            top: "50%",
-                            left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            filter: 'invert(1)',
-                        },
-                    },
-                    '& .slick-next': {
-                        right: '0px',
-                        '&:before': {
-                            content: "''",
-                            opacity: "1",
-                            backgroundImage: `url(${ChevronRight})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'contain',
-                            backgroundRepeat: 'no-repeat',
-                            width: '40px',
-                            height: "40px",
-                            position: 'absolute',
-                            top: "50%",
-                            left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            filter: 'invert(1)',
-                        },
-                    },
-                    '& .slick-slide': {
-                        transition: '0.8s all',
-                        opacity: { lg: '0.2', md: '0.2', sm: '0.2', xs: '0.6', },
-                        transform: 'scale(0.90)',
-                    },
-                    '& .slick-slide.slick-active': {
-                        opacity: "0.4",
-                        transform: 'scale(0.95)',
-                    },
-                    '& .slick-slide.slick-active.slick-center.slick-current': {
-                        opacity: "1",
-                        transform: 'scale(1)',
-                    },
-                    '& .slick-dots': {
-                        bottom: "0",
-                        '& li': {
-                            width: "5px",
-                            height: "5px",
-                            lineHeight: "2px",
-                            transition: '0.5s ease',
-                            '& button': {
-                                width: "5px",
-                                height: "5px",
-                                lineHeight: "2px",
-                                transition: '0.5s ease',
-                                '&:before': {
-                                    content: "''",
-                                    opacity: "0.5",
-                                    background: '#fff',
-                                    width: "5px",
-                                    height: "5px",
-                                    lineHeight: "2px",
-                                    borderRadius: "100px",
-                                    transition: '0.5s ease',
-                                },
-                            },
-                            '&.slick-active': {
-                                width: "24px",
-                                height: "5px",
-                                lineHeight: "2px",
-                                '& button': {
-                                    width: "24px",
-                                    height: "5px",
-                                    lineHeight: "2px",
-                                    '&:before': {
-                                        opacity: "0.8",
-                                        background: '#e5997d',
-                                        width: "24px",
-                                        height: "5px",
-                                        lineHeight: "2px",
-                                    },
-                                },
-                            },
-                        },
-
-                    },
-
-
-
                     '& .workitem': {
-                        padding: '0 5px',
                     },
                     '& .workbox': {
                         background: '#000',
                         color: '#fff',
                         borderRadius: "0px",
-                        padding: { lg: '25px', md: '25px', sm: '25px', xs: '15px', },
+                        padding: { lg: '25px', md: '25px', sm: '15px', xs: '15px', },
+                        height: { lg: 'auto', md: 'auto', sm: '262px', xs: 'auto', },
                         position: "relative",
                         cursor: 'pointer',
                         border: '1px solid rgb(7 180 187 / 30%)',
                         '& .workboximg': {
                             overflow: 'hidden',
                             position: "relative",
-                            height: { lg: '350px', md: '350px', sm: '180px', xs: '180px', },
+                            height: { lg: '230px', md: '200px', sm: '116px', xs: '180px', },
                             borderRadius: "0px",
                             '&:after': {
                                 content: "''",
@@ -255,32 +104,36 @@ const MyRecentWorks = () => {
                                 objectFit: 'cover',
                                 borderRadius: "0px",
                                 transition: "0.5s ease",
+                                objectPosition: 'top',
                             },
                         },
                         '& .workboxtext': {
-                            marginTop: '20px',
                             position: 'relative',
+                            height: { lg: '230px', md: '200px', sm: '230px', xs: '180px', },
                             '& h5': {
                                 color: "#fff",
                                 fontWeight: '500',
                                 fontSize: { lg: '26px', md: '26px', sm: '26px', xs: '16px', },
                             },
                             '& p': {
-                                color: '#07B4BB',
+                                color: '#fff',
+                                opacity: "0.5",
                                 fontSize: { lg: '14px', md: '14px', sm: '14px', xs: '12px', },
-                                fontWeight: '500',
+                                fontWeight: '400',
                                 marginBottom: '10px',
+                                textTransform: 'capitalize',
+                            },
+                            '& h6': {
+                                color: '#07B4BB',
+                                fontSize: { lg: '12px', md: '12px', sm: '12px', xs: '12px', },
+                                fontWeight: '500',
                                 textTransform: 'uppercase',
                             },
                             '& span': {
                                 color: '#FFF',
-                                position: 'absolute',
-                                top: '50%',
-                                right: '0',
-                                transform: 'translateY(-50%)',
                                 width: '40px',
                                 height: '40px',
-                                border: '1px solid rgb(229 153 125 / 21%)',
+                                border: '1px solid transparent',
                                 borderRadius: '0px',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -290,7 +143,7 @@ const MyRecentWorks = () => {
                         },
                         '&:hover': {
                             '& img': {
-                                transform: 'scale(1.03)',
+                                transform: 'scale(1.01)',
                             },
                             '& span': {
                                 background: '#e5997d',
@@ -298,120 +151,227 @@ const MyRecentWorks = () => {
                         },
                     },
                 }}>
-                    <Slider {...settings}>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={HeroIcCover} alt="" />
+                    <Container>
+                        <Grid2 container>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{
+                                    marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', },
+                                }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboximg'>
+                                            <img src={Yaoweliness} alt="" />
+                                        </Box>
+                                    </Box>
                                 </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (PHP)</Typography>
-                                    <Typography variant="h5">Heroic</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
+                            </Grid2>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboxtext'>
+                                            <Box sx={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                borderBottom: "1px solid rgb(7 180 187 / 30%)",
+                                                paddingBottom: "20px",
+                                                marginBottom: "10px",
+                                            }}>
+                                                <Typography variant="h5">yaowellness</Typography>
+                                                <Typography variant="span">
+                                                    <CallMadeRoundedIcon />
+                                                </Typography>
+                                            </Box>
+                                            <Typography>Yao Wellness blends Traditional Chinese Massage techniques with modern wellness practices to create a calm, effective, and approachable experience. Our goal is simple: help you feel better in your body and more balanced in your life.</Typography>
+                                            {/* <Typography variant="h6">Wordpress</Typography> */}
+
+                                        </Box>
+                                    </Box>
                                 </Box>
-                            </Box>
-                        </Box>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={OmiDyCover} alt="" />
+                            </Grid2>
+                        </Grid2>
+                        <Grid2 sx={{
+                            flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column-reverse', },
+                        }} container>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboxtext'>
+                                            <Box sx={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                borderBottom: "1px solid rgb(7 180 187 / 30%)",
+                                                paddingBottom: "20px",
+                                                marginBottom: "10px",
+                                            }}>
+                                                <Typography variant="h5">Bookfreelancer</Typography>
+                                                <Typography variant="span">
+                                                    <CallMadeRoundedIcon />
+                                                </Typography>
+                                            </Box>
+                                            <Typography>Book Freelancer is a digital platform designed to connect individuals and businesses with independent service providers across a wide range of lifestyle, hospitality, real estate and professional industries. </Typography>
+                                            {/* <Typography variant="h6">Wordpress</Typography> */}
+
+                                        </Box>
+                                    </Box>
                                 </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (React JS)</Typography>
-                                    <Typography variant="h5">Omi Day</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
+                            </Grid2>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboximg'>
+                                            <img src={Bookfreelancer} alt="" />
+                                        </Box>
+                                    </Box>
                                 </Box>
-                            </Box>
-                        </Box>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={OFCover} alt="" />
+                            </Grid2>
+                        </Grid2>
+                        <Grid2 container>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboximg'>
+                                            <img src={Rosswaldhuette} alt="" />
+                                        </Box>
+                                    </Box>
                                 </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (wordpress)</Typography>
-                                    <Typography variant="h5">Optifly</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
+                            </Grid2>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px", }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboxtext'>
+                                            <Box sx={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                borderBottom: "1px solid rgb(7 180 187 / 30%)",
+                                                paddingBottom: "20px",
+                                                marginBottom: "10px",
+                                            }}>
+                                                <Typography variant="h5">Rosswaldhuette</Typography>
+                                                <Typography variant="span">
+                                                    <CallMadeRoundedIcon />
+                                                </Typography>
+                                            </Box>
+                                            <Typography>We look forward to your visit!
+                                                The Hasenauer family and the Rosswaldhütte team</Typography>
+                                            {/* <Typography variant="h6">VueJs</Typography> */}
+
+                                        </Box>
+                                    </Box>
                                 </Box>
-                            </Box>
-                        </Box>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={RBCover} alt="" />
+                            </Grid2>
+                        </Grid2>
+                        <Grid2 sx={{
+                            flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column-reverse', },
+                        }} container>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboxtext'>
+                                            <Box sx={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                borderBottom: "1px solid rgb(7 180 187 / 30%)",
+                                                paddingBottom: "20px",
+                                                marginBottom: "10px",
+                                            }}>
+                                                <Typography variant="h5">Longlife</Typography>
+                                                <Typography variant="span">
+                                                    <CallMadeRoundedIcon />
+                                                </Typography>
+                                            </Box>
+                                            <Typography>Thanks to its uniquely high content of natural magnesium, Long Life mineral water serves as a valuable source of energy and increases performance in work, school and sports.</Typography>
+                                            {/* <Typography variant="h6">VueJs</Typography> */}
+
+                                        </Box>
+                                    </Box>
                                 </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (YII)</Typography>
-                                    <Typography variant="h5">Royalbatch</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
+                            </Grid2>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboximg'>
+                                            <img src={Longlife} alt="" />
+                                        </Box>
+                                    </Box>
                                 </Box>
-                            </Box>
-                        </Box>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={HeroIcCover} alt="" />
+                            </Grid2>
+                        </Grid2>
+                        <Grid2 container>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, marginTop: "-1px" }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboximg'>
+                                            <img src={Nextmatchup} alt="" />
+                                        </Box>
+                                    </Box>
                                 </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (PHP)</Typography>
-                                    <Typography variant="h5">Heroic</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
+                            </Grid2>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboxtext'>
+                                            <Box sx={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                borderBottom: "1px solid rgb(7 180 187 / 30%)",
+                                                paddingBottom: "20px",
+                                                marginBottom: "10px",
+                                            }}>
+                                                <Typography variant="h5">Nextmatchup</Typography>
+                                                <Typography variant="span">
+                                                    <CallMadeRoundedIcon />
+                                                </Typography>
+                                            </Box>
+                                            <Typography>We currently host meetups in 11 cities, with more cities being added as our community grows. Whether you are looking to spark a romantic connection, share a meal through Dinner with Strangers, or exchange ideas at a Meetup with Creatives, NextMatchup creates spaces where people can connect beyond the screen.</Typography>
+                                            {/* <Typography variant="h6">Wordpress</Typography> */}
+
+                                        </Box>
+                                    </Box>
                                 </Box>
-                            </Box>
-                        </Box>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={OmiDyCover} alt="" />
+                            </Grid2>
+                        </Grid2>
+                        <Grid2 sx={{
+                            flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column-reverse', },
+                        }} container>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px", marginRight: { lg: '-1px', md: '-1px', sm: '-1px', xs: '0', }, }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboxtext'>
+                                            <Box sx={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                borderBottom: "1px solid rgb(7 180 187 / 30%)",
+                                                paddingBottom: "20px",
+                                                marginBottom: "10px",
+                                            }}>
+                                                <Typography variant="h5">Vinhuset</Typography>
+                                                <Typography variant="span">
+                                                    <CallMadeRoundedIcon />
+                                                </Typography>
+                                            </Box>
+                                            <Typography>At Vinhuset, it's not just about wine. It's about creating community, coziness and small moments of luxury in everyday life. </Typography>
+                                            {/* <Typography variant="h6">Shopify</Typography> */}
+
+                                        </Box>
+                                    </Box>
                                 </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (React JS)</Typography>
-                                    <Typography variant="h5">Omi Day</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
+                            </Grid2>
+                            <Grid2 size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Box sx={{ marginTop: "-1px" }} className='workitem'>
+                                    <Box className='workbox'>
+                                        <Box className='workboximg'>
+                                            <img src={Vinhuset} alt="" />
+                                        </Box>
+                                    </Box>
                                 </Box>
-                            </Box>
-                        </Box>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={OFCover} alt="" />
-                                </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (wordpress)</Typography>
-                                    <Typography variant="h5">Optifly</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Box>
-                        <Box className='workitem'>
-                            <Box className='workbox'>
-                                <Box className='workboximg'>
-                                    <img src={RBCover} alt="" />
-                                </Box>
-                                <Box className='workboxtext'>
-                                    <Typography variant="body1">web design (YII)</Typography>
-                                    <Typography variant="h5">Royalbatch</Typography>
-                                    <Typography variant="span">
-                                        <CallMadeRoundedIcon />
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Box>
-                    </Slider>
+                            </Grid2>
+                        </Grid2>
+                    </Container>
                 </Box>
                 <Box sx={{
                     textAlign: 'center',
