@@ -266,6 +266,10 @@ const HeroSection = () => {
                                 animationDelay: '0.4s',
                             }}>
                                 <Box
+                                onClick={() => {
+                    const section = document.getElementById("contact")
+                    section?.scrollIntoView({ behavior: "smooth" })
+                }}
                                     component="a"
                                     href="#"
                                     className="btn-cv"
@@ -295,6 +299,10 @@ const HeroSection = () => {
                                 </Box>
                                 
                                 <Box
+                                onClick={() => {
+                                        const section = document.getElementById("projects")
+                                        section?.scrollIntoView({ behavior: "smooth" })
+                                    }}
                                     component="a"
                                     href="#"
                                     className="btn-work glass-card"

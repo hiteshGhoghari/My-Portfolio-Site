@@ -110,7 +110,7 @@ const MyRecentWorks = () => {
 
     return (
         <>
-            <Box sx={{
+            <Box id="projects" sx={{
                 position: 'relative',
                 zIndex: 1,
                 background: 'linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 50%, #0d1117 100%)',

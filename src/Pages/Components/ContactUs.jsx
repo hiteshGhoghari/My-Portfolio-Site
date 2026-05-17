@@ -392,14 +392,14 @@ const ContactUs = () => {
                                             color: 'rgba(255, 255, 255, 0.7)',
                                             lineHeight: 1.6,
                                         }}>
-                                            <Link href="mailto:hitesh.ghoghari007@gmail.com" sx={{
+                                            <Link href="mailto:ghogharihitesh7@gmail.com" sx={{
                                                 color: 'inherit',
                                                 textDecoration: 'none',
                                                 '&:hover': {
                                                     color: '#0abf8e',
                                                 },
                                             }}>
-                                                hitesh.ghoghari007@gmail.com
+                                                ghogharihitesh7@gmail.com
                                             </Link>
                                         </Typography>
                                     </Box>
