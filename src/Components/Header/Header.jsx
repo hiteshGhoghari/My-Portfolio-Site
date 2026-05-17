@@ -1,29 +1,24 @@
 import React, { useState } from 'react'
-import { Box } from '@mui/material';
-import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
-// import BrandLogo from '../../assets/image/brand-logo.svg';
-import BrandLogo from '../../assets/image/Logo.svg';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import { Box } from '@mui/material'
+import AppBar from '@mui/material/AppBar'
+import CssBaseline from '@mui/material/CssBaseline'
+import Drawer from '@mui/material/Drawer'
+import IconButton from '@mui/material/IconButton'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import Toolbar from '@mui/material/Toolbar'
+import Button from '@mui/material/Button'
+import { Link } from 'react-router-dom'
+import BrandLogo from '../../assets/image/Logo.svg'
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 
-const drawerWidth = 240;
-const navItems = ['Home', 'About Us', 'Services', 'Portfolio', 'Contact'];
-
-
-
+const drawerWidth = 240
+const navItems = ['Home', 'About Us', 'Services', 'Portfolio', 'Contact']
 const Header = () => {
-    const [mobileOpen, setMobileOpen] = useState();
-
+    const [mobileOpen, setMobileOpen] = useState()
     const handleDrawerToggle = () => {
-        setMobileOpen((prevState) => !prevState);
-    };
+        setMobileOpen((prevState) => !prevState)
+    }
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <List>
@@ -42,7 +37,7 @@ const Header = () => {
                     background: "transparent",
                     color: "#07B4BB",
                     border: "1px solid #07B4BB",
-                    borderRadius: "0",
+                    borderRadius: "12",
                     fontSize: '16px',
                     fontWeight: 600,
                     boxShadow: 'none',
@@ -55,16 +50,18 @@ const Header = () => {
                     '&:hover': {
                         color: '#fff',
                         background: '#07B4BB',
-                        transform: 'skewX(-15deg)',
                     },
                 },
             }} className='cotnact-btn'>
-                <Button variant="contained" color="success" className='theme-btn'>
+                <Button onClick={() => {
+                    const section = document.getElementById("contact")
+                    section?.scrollIntoView({ behavior: "smooth" })
+                }} variant="contained" color="success" className='theme-btn'>
                     Hire Me!
                 </Button>
             </Box>
         </Box>
-    );
+    )
     return (
         <>
             <Box sx={{
@@ -76,7 +73,7 @@ const Header = () => {
                         minHeight: 'auto',
                         padding: { lg: '0 60px', md: '0 20px', sm: '0 20px', xs: '0 20px' },
                         borderBottom: '1px solid #414141',
-                        height: { lg: "98px", md: "75px", },
+                        height: { lg: "98px", md: "75px" },
                     },
                 },
             }}>
@@ -84,7 +81,7 @@ const Header = () => {
                 <AppBar component="nav">
                     <Toolbar>
                         <Box sx={{
-                            display: { md: 'none', sm: 'flex', xs: 'flex', },
+                            display: { md: 'none', sm: 'flex', xs: 'flex' },
                             alignItems: 'center',
                             justifyContent: 'space-between',
                             width: '100%',
@@ -94,7 +91,7 @@ const Header = () => {
                                 '& a': {
                                     display: 'block',
                                     lineHeight: '0',
-                                    width: { lg: '160px', md: '140px', sm: '120px', xs: '110px', },
+                                    width: { lg: '160px', md: '140px', sm: '120px', xs: '110px' },
                                     '& img': {
                                         width: '100%',
                                     },
@@ -125,7 +122,7 @@ const Header = () => {
                                 '& a': {
                                     display: 'block',
                                     lineHeight: '0',
-                                    width: { lg: '160px', md: '140px', sm: '140px', xs: '140px', },
+                                    width: { lg: '160px', md: '140px', sm: '140px', xs: '140px' },
                                     '& img': {
                                         width: '100%',
                                     },
@@ -139,7 +136,7 @@ const Header = () => {
                                     fontSize: '18px',
                                     fontWeight: '500',
                                     padding: '10px',
-                                    marginRight: { lg: '20px', md: '10px', },
+                                    marginRight: { lg: '20px', md: '10px' },
                                     '&:hover': {
                                         color: '#EB9C7F',
                                     },
@@ -158,7 +155,7 @@ const Header = () => {
                                     background: "transparent",
                                     color: "#07B4BB",
                                     border: "1px solid #07B4BB",
-                                    borderRadius: "0",
+                                    borderRadius: "12px",
                                     padding: { lg: "10px 28px", md: "6px 22px" },
                                     fontSize: '16px',
                                     fontWeight: 600,
@@ -169,11 +166,13 @@ const Header = () => {
                                     '&:hover': {
                                         color: '#fff',
                                         background: '#07B4BB',
-                                        transform: 'skewX(-15deg)',
                                     },
                                 },
                             }} className='cotnact-btn'>
-                                <Button variant="contained" color="success" className='theme-btn'>
+                                <Button onClick={() => {
+                                    const section = document.getElementById("contact")
+                                    section?.scrollIntoView({ behavior: "smooth" })
+                                }} variant="contained" color="success" className='theme-btn'>
                                     Hire Me!
                                 </Button>
                             </Box>
@@ -185,7 +184,7 @@ const Header = () => {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true,
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'block', md: 'none' },
@@ -206,13 +205,11 @@ const Header = () => {
                                     },
                                 },
                             },
-
                         },
                     }}
                 >
                     {drawer}
                 </Drawer>
-
             </Box>
         </>
     )

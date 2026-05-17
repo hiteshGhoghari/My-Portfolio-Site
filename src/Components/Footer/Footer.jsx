@@ -130,7 +130,9 @@ const Footer = () => {
                                     },
                                 },
                             }}>
-                                <Link to="/" target='_blank' title="Linkedin"><img src={LinkedinIcon} /></Link>
+                                <a href="https://www.linkedin.com/in/hitesh-ghoghari-97b497135" target="_blank" rel="noopener noreferrer">
+                                    <img src={LinkedinIcon} alt="LinkedIn" />
+                                </a>
                                 <Link to="/" target='_blank' title="Instagram"><img src={InstagramIcon} /></Link>
                                 <Link to="/" target='_blank' title="Facebook"><img src={FacebookIcon} /></Link>
                             </Box>
